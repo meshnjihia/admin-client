@@ -1,8 +1,9 @@
 'use client'
-import { Image as ImageType } from "@/types"
 
 import Image from "next/image"
 import { Tab } from "@headlessui/react"
+
+import { Image as ImageType } from "@/types"
 import { GalleryTab } from "@/components/gallery/gallery-tab"
 
 type GalleryProps = {

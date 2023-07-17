@@ -1,9 +1,11 @@
 'use client'
-import { Button } from '@/components/ui/button'
+import qs from 'query-string'
+
 import { cn } from '@/lib/utils'
 import { Color, Size } from '@/types'
+import { Button } from '@/components/ui/button'
+
 import { useRouter, useSearchParams } from 'next/navigation'
-import qs from 'query-string'
 
 type FilterProps = {
   name: string

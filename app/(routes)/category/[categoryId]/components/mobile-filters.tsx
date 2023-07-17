@@ -1,13 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-
-import { Button } from '@/components/ui/button'
-import { Color, Size } from '@/types'
 import { Dialog } from '@headlessui/react'
 import { FilterIcon, XIcon } from 'lucide-react'
-import { IconButton } from '@/components/icon-button'
+
 import { Filter } from './filter'
+import { Color, Size } from '@/types'
+import { Button } from '@/components/ui/button'
+import { IconButton } from '@/components/icon-button'
 
 type MobileFilterProps = {
   sizes: Size[]

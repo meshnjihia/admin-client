@@ -1,8 +1,8 @@
-import { getBillboard } from '@/actions/get-billboard'
-import { getProducts } from '@/actions/get-products'
 import { Billboard } from '@/components/billboard'
-import { ProductList } from '@/components/product-list'
+import { getProducts } from '@/actions/get-products'
 import { Container } from '@/components/ui/container'
+import { getBillboard } from '@/actions/get-billboard'
+import { ProductList } from '@/components/product-list'
 
 export const revalidate = 0
 

@@ -45,7 +45,7 @@ const CategoryPage = async ({ params, searchParams }: CategoryPageProps) => {
             <Filter valueKey="colorId" name="Colors" data={colors} />
           M</div>
           <div className='mt-6 lg:col-span-4 lg:mt-0'>
-            {products.length === 0 && <NoResults />}
+            {products.length === 0 && <NoResults description='No results found!'/>}
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
               {products.map((item) => (
                 <ProductCard key={item.id} data={item} />

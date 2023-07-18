@@ -1,14 +1,22 @@
 'use client'
-import { Product } from '@/types'
-
-import { Currency } from '@/components/ui/currency'
-import { Button } from '@/components/ui/button'
+import { MouseEventHandler } from 'react'
 import { ShoppingCartIcon } from 'lucide-react'
+
+import { Product } from '@/types'
+import { useCart } from '@/hooks/use-cart'
+import { Button } from '@/components/ui/button'
+import { Currency } from '@/components/ui/currency'
 
 type InfoProps = {
   data: Product
 }
 export const Info = ({ data }: InfoProps) => {
+  const cart = useCart()
+  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.stopPropagation()
+
+    cart.addItem(data)
+  }
   return (
     <div>
       <h3 className="text-3xl font-bold text-gray-900">{data.name}</h3>
@@ -18,7 +26,7 @@ export const Info = ({ data }: InfoProps) => {
         </p>
       </div>
       <hr className="my-4" />
-      <div className='flex flex-col gap-y-6'>
+      <div className="flex flex-col gap-y-6">
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-blackMine">Size:</h3>
           <div>
@@ -40,10 +48,10 @@ export const Info = ({ data }: InfoProps) => {
           </div>
         </div>
       </div>
-      <div className='mt-10 flex items-center gap-x-4'>
-        <Button className='flex items-center gap-x-2 px-4 py-2'>
+      <div className="mt-10 flex items-center gap-x-4">
+        <Button onClick={onAddToCart} className="flex items-center gap-x-2 px-4 py-2">
           Add to cart
-          <ShoppingCartIcon className='w-4 h-4'/>
+          <ShoppingCartIcon className="w-4 h-4" />
         </Button>
       </div>
     </div>

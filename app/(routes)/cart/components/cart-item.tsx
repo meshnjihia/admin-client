@@ -6,7 +6,7 @@ import { MinusIcon } from "lucide-react";
 import {Currency} from "@/components/ui/currency";
 import {useCart} from "@/hooks/use-cart";
 import { Product } from "@/types";
-import { IconButton } from "./icon-button";
+import { IconButton } from "@/components/icon-button";
 
 
 type CartItemProps = {

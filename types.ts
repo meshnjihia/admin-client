@@ -9,7 +9,7 @@ export type BillboardType = {
 export type Category = {
     id: string
     name: string
-    billboard: Billboard
+    billboard: BillboardType
 }
 
 export type Product = {

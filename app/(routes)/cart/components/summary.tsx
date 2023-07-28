@@ -1,9 +1,9 @@
 'use client'
 
+import axios from 'axios'
 import { Button } from '@/components/ui/button'
 import { Currency } from '@/components/ui/currency'
 import { useCart } from '@/hooks/use-cart'
-import axios from 'axios'
 import { useSearchParams } from 'next/navigation'
 import { useEffect } from 'react'
 import { toast } from 'react-toastify'
@@ -46,7 +46,7 @@ export const Summary = () => {
           <Currency value={totalPrice} />
         </div>
       </div>
-      <Button onClick={onCheckout} className="mt-6 w-full py-2 ">Proceed to Checkout</Button>
+      <Button disabled={items.length === 0} onClick={onCheckout} className="mt-6 w-full py-2 ">Proceed to Checkout</Button>
     </div>
   )
 }

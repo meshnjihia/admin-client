@@ -11,6 +11,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         'w-auto rounded-full hover:bg-[#192323] border-transparent px-5 py-3  bg-[#d08b15] disabled:cursor-not-allowed disabled:opacity-50 text-white  transition',
         className,
         )}
+        disabled={disabled}
         ref={ref}
         {...props}
         >
